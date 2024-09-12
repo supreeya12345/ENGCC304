@@ -30,33 +30,25 @@ int main() {
                     scanf("Score this game: %d  \n" , score ) ;
                     }
                     if( Number < K ) {
+        
                         if(Number > Low){
-                            Low =  Number + 1 ;
-                            score= score-10 ;
-                             printf(  "Sorry, the winning number is LOWER than %d ( Score : %d )\n " , Number, score);
-
-                        }else{
-                            score= score-10 ;
-                            printf(  "Sorry, the winning number is LOWER than %d ( Score : %d )\n " , Number, score);
-
-
+                          Low =  Number + 1 ;
+                          score = score-10 ;
+                        printf(  "Sorry, the winning number is LOWER than %d ( Score : %d )\n " , Number, score);
                         }
-            
                     }else if ( Number > K) {
-                        if (Number > Hight) {
-                             score = score - 10 ;
+                        if (Number<Hight ) {
                             printf(" Sorry, the winning number is HIGHER than  %d ( Score : %d )\n" , Number , score) ;
-                        } else {
-                            Hight = Number - 1 ;
-                             score = score - 10 ;
-                            printf(" Sorry, the winning number is HIGHER than  %d ( Score : %d )\n" , Number , score) ;
+                        }else{
+                           Hight = Number - 1 ;
+                          score = score-10 ;
+                          printf(" Sorry, the winning number is HIGHER than  %d ( Score : %d )\n" , Number , score) ;
                         }
 
-                        
-                        
-                      }
+                    }
                   }while (Number != K) ;
 
         } while (play == 1);
-     return 0 ;
+  return 0 ;
 }
+
